@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:text="商品名称" />
+
+    <ethank.tableshow.view.NoScrollHorizontalScrollView
+        android:id="@+id/hz_title"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_toRightOf="@id/tv_name"
+        android:scrollbars="none" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerview_name"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_name"
+        android:divider="#ffff0000"
+        android:dividerHeight="1dp" />
+
+    <ethank.tableshow.view.LinkedHorizontalScrollView
+        android:id="@+id/hz_good_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tv_name"
+        android:layout_toRightOf="@id/recyclerview_name"
+        android:scrollbars="none">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerview_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </ethank.tableshow.view.LinkedHorizontalScrollView>
+</RelativeLayout>
